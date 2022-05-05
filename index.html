@@ -1,63 +1,65 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <style type="text/css">
-.dialog-content {
-    padding: 30px;
-}
-#content-drawer {
-    padding: 20px;
-    font-weight: 400;
-}
-#content-main {
-    padding: 20px;
-    width: 100%;
-    height: 700px;
-    background: tomato;
-    font-size: 50px;
-    color:#fff;
-}
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<style type="text/css">
+			.dialog-content { padding: 30px; } #content-drawer { padding: 20px; font-weight:
+			400; } #content-main { padding: 20px; width: 100%; height: 700px; background:
+			tomato; font-size: 50px; color:#fff; } #content-footer { padding: 30px;
+			}
+		</style>
+		<!-- MDUI CSS -->
+		<link rel="stylesheet" href="https://npm.sourcegcdn.com/mdui@1.0.2/dist/css/mdui.min.css"
+		/>
+		<title>
+			AD-link Bypasser
+		</title>
+	</head>
+	<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo">
+		<!-- 头部 -->
+		<header class="mdui-appbar mdui-appbar-fixed" id="content-header">
+			<div class="mdui-toolbar mdui-color-theme">
+				<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#content-drawer', swipe: true}">
+					<i class="mdui-icon material-icons">
+						menu
+					</i>
+				</span>
+				<a href="" class="mdui-typo-title">
+					AD-link Bypasser
+				</a>
+				<div class="mdui-toolbar-spacer">
+				</div>
+			</div>
+		</header>
+		<!-- 侧边栏 -->
+		<div class="mdui-drawer" id="content-drawer">
+			<ul class="mdui-list">
+				<li class="mdui-list-item mdui-list-item-active mdui-ripple">
+					首页
+				</li>
+				<li class="mdui-divider">
+				</li>
+				<li class="mdui-list-item mdui-ripple">
+					关于
+				</li>
+			</ul>
+		</div>
+		<!-- 内容 -->
+		<div class="mdui-container" id="content-main">
+			内容
+		</div>
+		<!-- 尾部 -->
+		<div class="mdui-color-theme" id="content-footer">
+			Copyright
+		</div>
+		<!-- MDUI JavaScript -->
+		<script src="https://npm.sourcegcdn.commdui@1.0.2/dist/js/mdui.min.js">
+		</script>
+	</body>
 
-#content-footer {
-    padding: 30px;
-}
-</style>
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://npm.sourcegcdn.com/mdui@1.0.2/dist/css/mdui.min.css"/>
-    <title>AD-link Bypasser</title>
-  </head>
-  <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo">
-    <!-- 头部 -->
-    <header class="mdui-appbar mdui-appbar-fixed" id="content-header">
-        <div class="mdui-toolbar mdui-color-theme">
-            <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#content-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-            <a href="" class="mdui-typo-title">AD-link Bypasser</a>
-            <div class="mdui-toolbar-spacer"></div>
-        </div>
-    </header>
-
-    <!-- 侧边栏 -->
-    <div class="mdui-drawer" id="content-drawer">
-        <ul class="mdui-list">
-  <li class="mdui-list-item mdui-list-item-active mdui-ripple">首页</li>
-  <li class="mdui-divider"></li>
-  <li class="mdui-list-item mdui-ripple">关于</li>
-</ul>
-    </div>
-
-    <!-- 内容 -->
-    <div class="mdui-container" id="content-main">
-        内容
-    </div>
-
-    <!-- 尾部 -->
-    <div class="mdui-color-theme" id="content-footer">Copyright</div>
-    <!-- MDUI JavaScript -->
-    <script src="https://npm.sourcegcdn.commdui@1.0.2/dist/js/mdui.min.js"></script>
-  </body>
 </html>
