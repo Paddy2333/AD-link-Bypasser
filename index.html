@@ -14,65 +14,72 @@
 			AD-link Bypasser
 		</title>
 		<script>
-            let supported_urls = [
-                new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/[0-9]+/[^/]+'),
-                new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/download/[0-9]+/[^/]+/.+'),
-                new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/premium-redirect/[0-9]+'),
-                new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/[0-9]+/[^/]+/dynamic/?'),
-                new RegExp('^https?://(acconpit[.]com|aciterar[.]com|aclabink[.]com|activeation[.]com|activeterium[.]com|adf[.]acb[.]im|adf[.]ly|agileurbia[.]com|android-zone[.]org|anthargo[.]com|aporasal[.]net|aspedrom[.]com|atabencot[.]net|atharori[.]net|atomcurve[.]com|atominik[.]com|ay[.]gy|babblecase[.]com|battleate[.]com|beteshis[.]com|bitigee[.]com|blaleela[.]com|bluenik[.]com|botemoda[.]com|briskrange[.]com|brisktopia[.]com|caneddir[.]com|casualient[.]com|cesinthi[.]com|chinnica[.]net|cigorsica[.]com|clesolea[.]com|coginator[.]com|cogismith[.]com|combostruct[.]com|cowner[.]net|crefranek[.]com|criarysm[.]com|dapalan[.]com|dashsphere[.]com|dataurbia[.]com|deciomm[.]com|detonnot[.]com|dl[.]android-zone[.]org|ducolomal[.]com|ecleneue[.]com|eleburic[.]com|ethobleo[.]com|eunsetee[.]com|evassmat[.]com|evolterr[.]com|extrecey[.]com|fainbory[.]com|fasttory[.]com|fawright[.]com|fiaharam[.]net|flyserve[.]co|fumacrom[.]com|furtelec[.]com|gatustox[.]net|gdanstum[.]net|getrom[.]net|gloyah[.]net|greponozy[.]com|gusimp[.]net|hideadew[.]com|hinafinea[.]com|homoluath[.]com|hopigrarn[.]com|infopade[.]com|infortr[.]co[.]vu|intamema[.]com|ivononic[.]com|j[.]gs|kaitect[.]com|keistaru[.]com|kializer[.]com|kibuilder[.]com|kimechanic[.]com|ksatech[.]info|kudoflow[.]com|larati[.]net|legeerook[.]com|libittarc[.]com|linkjaunt[.]com|locinealy[.]com|lopoteam[.]com|maetrimal[.]com|meriabub[.]net|metastead[.]com|microify[.]com|mmoity[.]com|morebatet[.]com|motriael[.]com|movincle[.]com|neswery[.]com|nimbleinity[.]com|onisedeo[.]com|onizatop[.]net|optitopt[.]com|orablyro[.]com|out[.]unionfansub[.]com|packs[.]redmusic[.]pl|pheecith[.]com|picocurl[.]com|pintient[.]com|pladollmo[.]com|prereheus[.]com|q[.]gs|quainator[.]com|quamiller[.]com|queuecosm[.]bid|raboninco[.]com|rainonit[.]com|rantenah[.]com|rapidteria[.]com|rapidtory[.]com|regecish[.]net|riffhold[.]com|scapognel[.]com|scuseami[.]net|simizer[.]com|skamaker[.]com|skamason[.]com|sluppend[.]com|smeartha[.]com|sprysphere[.]com|stratoplot[.]com|streamvoyage[.]com|st[.]uploadit[.]host|svencrai[.]com|swarife[.]com|swiftation[.]com|swifttopia[.]com|thacorag[.]com|thouth[.]net|tinyical[.]com|tinyium[.]com|tonancos[.]com|toolusts[.]com|triabicia[.]com|turboagram[.]com|twineer[.]com|twiriock[.]com|urstoron[.]com|velocicosm[.]com|velociterium[.]com|viahold[.]com|vismuene[.]com|viwright[.]com|vonasort[.]com|whareotiv[.]com|wirecellar[.]com|www[.]adf[.]ly|www[.]cowner[.]net|xterca[.]net|yabuilder[.]com|yamechanic[.]com|yoalizer[.]com|yobuilder[.]com|yoineer[.]com|yoitect[.]com|zipansion[.]com|zipteria[.]com|zipvale[.]com|zo[.]ee|zoee[.]xyz)/.'),
-                new RegExp('^https?://bit[.]ly/.'),
-            ];
+			let supported_urls = [
+    new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/[0-9]+/[^/]+'),
+    new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/download/[0-9]+/[^/]+/.+'),
+    new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/premium-redirect/[0-9]+'),
+    new RegExp('^https?://(linkvertise[.]com|linkvertise[.]net|link-to[.]net|linkvertise[.]download|file-link[.]net|direct-link[.]net|up-to-down[.]net|link-hub[.]net|link-center[.]net)/[0-9]+/[^/]+/dynamic/?'),
+    new RegExp('^https?://(acconpit[.]com|aciterar[.]com|aclabink[.]com|activeation[.]com|activeterium[.]com|adf[.]acb[.]im|adf[.]ly|agileurbia[.]com|android-zone[.]org|anthargo[.]com|aporasal[.]net|aspedrom[.]com|atabencot[.]net|atharori[.]net|atomcurve[.]com|atominik[.]com|ay[.]gy|babblecase[.]com|battleate[.]com|beteshis[.]com|bitigee[.]com|blaleela[.]com|bluenik[.]com|botemoda[.]com|briskrange[.]com|brisktopia[.]com|caneddir[.]com|casualient[.]com|cesinthi[.]com|chinnica[.]net|cigorsica[.]com|clesolea[.]com|coginator[.]com|cogismith[.]com|combostruct[.]com|cowner[.]net|crefranek[.]com|criarysm[.]com|dapalan[.]com|dashsphere[.]com|dataurbia[.]com|deciomm[.]com|detonnot[.]com|dl[.]android-zone[.]org|ducolomal[.]com|ecleneue[.]com|eleburic[.]com|ethobleo[.]com|eunsetee[.]com|evassmat[.]com|evolterr[.]com|extrecey[.]com|fainbory[.]com|fasttory[.]com|fawright[.]com|fiaharam[.]net|flyserve[.]co|fumacrom[.]com|furtelec[.]com|gatustox[.]net|gdanstum[.]net|getrom[.]net|gloyah[.]net|greponozy[.]com|gusimp[.]net|hideadew[.]com|hinafinea[.]com|homoluath[.]com|hopigrarn[.]com|infopade[.]com|infortr[.]co[.]vu|intamema[.]com|ivononic[.]com|j[.]gs|kaitect[.]com|keistaru[.]com|kializer[.]com|kibuilder[.]com|kimechanic[.]com|ksatech[.]info|kudoflow[.]com|larati[.]net|legeerook[.]com|libittarc[.]com|linkjaunt[.]com|locinealy[.]com|lopoteam[.]com|maetrimal[.]com|meriabub[.]net|metastead[.]com|microify[.]com|mmoity[.]com|morebatet[.]com|motriael[.]com|movincle[.]com|neswery[.]com|nimbleinity[.]com|onisedeo[.]com|onizatop[.]net|optitopt[.]com|orablyro[.]com|out[.]unionfansub[.]com|packs[.]redmusic[.]pl|pheecith[.]com|picocurl[.]com|pintient[.]com|pladollmo[.]com|prereheus[.]com|q[.]gs|quainator[.]com|quamiller[.]com|queuecosm[.]bid|raboninco[.]com|rainonit[.]com|rantenah[.]com|rapidteria[.]com|rapidtory[.]com|regecish[.]net|riffhold[.]com|scapognel[.]com|scuseami[.]net|simizer[.]com|skamaker[.]com|skamason[.]com|sluppend[.]com|smeartha[.]com|sprysphere[.]com|stratoplot[.]com|streamvoyage[.]com|st[.]uploadit[.]host|svencrai[.]com|swarife[.]com|swiftation[.]com|swifttopia[.]com|thacorag[.]com|thouth[.]net|tinyical[.]com|tinyium[.]com|tonancos[.]com|toolusts[.]com|triabicia[.]com|turboagram[.]com|twineer[.]com|twiriock[.]com|urstoron[.]com|velocicosm[.]com|velociterium[.]com|viahold[.]com|vismuene[.]com|viwright[.]com|vonasort[.]com|whareotiv[.]com|wirecellar[.]com|www[.]adf[.]ly|www[.]cowner[.]net|xterca[.]net|yabuilder[.]com|yamechanic[.]com|yoalizer[.]com|yobuilder[.]com|yoineer[.]com|yoitect[.]com|zipansion[.]com|zipteria[.]com|zipvale[.]com|zo[.]ee|zoee[.]xyz)/.'),
+    new RegExp('^https?://bit[.]ly/.'),
+];
 
-            let bypass = async function(url) {
-                let resp = await fetch("https://" + "bypass.bot.nu" + "/bypass2?url=" + encodeURIComponent(url));
-                let j = await resp.json()
+let bypass = async
+function(url) {
+    let resp = await fetch("https://" + "bypass.bot.nu" + "/bypass2?url=" + encodeURIComponent(url));
+    let j = await resp.json()
 
-                let time_ms = "";
-                if (typeof j.time_ms !== "undefined") {
-                    time_ms = "|" + j.time_ms + "ms";
-                }
+    let time_ms = "";
+    if (typeof j.time_ms !== "undefined") {
+        time_ms = "|" + j.time_ms + "ms";
+    }
 
-                console.log(j);
+    console.log(j);
 
-                let li = document.createElement("li");
+    let li = document.createElement("li");
 
-                if (j.success) {
-                    li.classList.add("success");
-                    li.textContent = "[" + j.plugin + time_ms + "] " + url + " - ";
-                    let a = document.createElement("a");
-                    a.textContent = j.destination;
-                    a.href = j.destination;
-                    a.rel = "nofollow noreferrer noopener";
-                    a.target = "_blank";
-                    li.appendChild(a);
-                } else {
-                    li.classList.add("failure");
-                    li.textContent =  "[" + j.plugin + time_ms + "] " + url + " - " + j.msg;
-                }
+    if (j.success) {
+        li.classList.add("success");
+        li.textContent = "[" + j.plugin + time_ms + "] " + url + " - ";
+        let a = document.createElement("a");
+        a.textContent = j.destination;
+        a.href = j.destination;
+        a.rel = "nofollow noreferrer noopener";
+        a.target = "_blank";
+        li.appendChild(a);
+    } else {
+        li.classList.add("failure");
+        li.textContent = "[" + j.plugin + time_ms + "] " + url + " - " + j.msg;
+    }
 
-                document.querySelector("ul").prepend(li);
+    document.querySelector("ul").prepend(li);
 
-                if (j.success && url !== j.destination && supported_urls.some(r => j.destination.match(r))) {
-                    await bypass(j.destination);
-                }
-            };
+    if (j.success && url !== j.destination && supported_urls.some(r => j.destination.match(r))) {
+        await bypass(j.destination);
+    }
+};
 
-            let submit = async function(e) {
-                e.preventDefault();
+let submit = async
+function(e) {
+    e.preventDefault();
 
-                let url = document.querySelector("input").value.trim();
+    let url = document.querySelector("input").value.trim();
 
-                await bypass(url);
-            };
+    await bypass(url);
+};
 
-            let onload = function() {
-                document.querySelector("form").addEventListener("submit", submit)
-            };
+let onload = function() {
+    document.querySelector("form").addEventListener("submit", submit)
+};
 
-            window.addEventListener('DOMContentLoaded', onload);
-        </script>
+window.addEventListener('DOMContentLoaded', onload);
+		</script>
+		<style>
+			.mdui-container { width: 60%; height: 60%; min-width: 400px; max-width:
+			500px; padding: 40px; overflow: auto; margin: auto; position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0; } p.padding { padding-top:25px; }
+		</style>
 	</head>
-	<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo">
+	<body class="mdui-theme-primary-indigo">
 		<!-- 头部 -->
 		<header class="mdui-appbar mdui-appbar-fixed" id="content-header">
 			<div class="mdui-toolbar mdui-color-theme">
@@ -84,24 +91,34 @@
 		<!-- 内容 -->
 		<div class="mdui-container mdui-textfield" id="content-main">
 			<p>
-            提交后可能要过一会儿才会出结果，请耐心等待<br/>
-            <form action="">
-                <input class="mdui-textfield-input" type="text" placeholder="请输入链接"/><br/>
-                <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-indigo-accent">提交</button>
-            </form>
-        </p>
-        <p>
-            结果:<br/>
-            <ul></ul>
-        </p>
-		</div>
-		<!-- 尾部 -->
-		<div class="mdui-color-theme mdui-ripple" id="content-footer">
-			Copyright © 2021-2022 Paddy All Right Served.	
-		</div>
-		<!-- MDUI JavaScript -->
-		<script src="https://npm.sourcegcdn.com/mdui@1.0.2/dist/js/mdui.min.js">
-		</script>
+				<div class="mdui-chip">
+					<span class="mdui-chip-title mdui-ripple">
+						It can take a while for the result to appear after submission.
+					</span>
+					<br/>
+					<form action="">
+						<input class="mdui-textfield-input" type="text" placeholder="Enter a valid URL..."
+						/>
+						<br/>
+						<button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-indigo">
+							Bypass
+						</button>
+					</form>
+			</p>
+			<p class="padding">
+				<div class="mdui-chip">
+					<span class="mdui-chip-title mdui-ripple">
+						Result:
+					</span>
+				</div>
+				<br/>
+				<ul>
+				</ul>
+			</p>
+			</div>
+			<!-- MDUI JavaScript -->
+			<script src="https://npm.sourcegcdn.com/mdui@1.0.2/dist/js/mdui.min.js">
+			</script>
 	</body>
 
 </html>
