@@ -38,7 +38,7 @@
 
                 if (j.success) {
                     li.classList.add("success");
-                    li.textContent = "[" + j.plugin + time_ms + "] " + url + " - ";
+                    li.textContent = "[" + j.plugin " - ";
                     let a = document.createElement("a");
                     a.textContent = j.destination;
                     a.href = j.destination;
@@ -47,7 +47,7 @@
                     li.appendChild(a);
                 } else {
                     li.classList.add("failure");
-                    li.textContent =  "[" + j.plugin + time_ms + "] " + url + " - " + j.msg;
+                    li.textContent =  " Link- " + j.msg;
                 }
 
                 document.querySelector("ul").prepend(li);
